@@ -1,0 +1,51 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc && tsc-alias",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed:all": "npx sequelize-cli db:seed:all",
+    "format": "npx prettier --write ./src --config ./.prettierrc",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/register": "^7.29.3",
+    "@types/cors": "^2.8.19",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^25.8.0",
+    "@types/socket.io": "^3.0.1",
+    "eslint": "^10.4.0",
+    "sequelize-cli": "^6.6.5",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.3"
+  },
+  "dependencies": {
+    "cloudinary": "^2.10.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-winston": "^4.2.0",
+    "http": "^0.0.1-security",
+    "joi": "^18.2.1",
+    "multer": "^2.1.1",
+    "pg": "^8.20.0",
+    "redis": "^5.12.1",
+    "sequelize": "^6.37.8",
+    "sequelize-typescript": "^2.1.6",
+    "socket.io": "^4.8.3",
+    "supabase": "^2.98.2",
+    "ts-node": "^10.9.2",
+    "winston": "^3.19.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
